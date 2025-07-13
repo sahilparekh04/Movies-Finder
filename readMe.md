@@ -22,6 +22,8 @@
 
 ## 🌟 Demo
 
+- https://sahilparekh04.github.io/Movies-Finder/
+
 ---
 
 ## 🛠️ Technologies Used
