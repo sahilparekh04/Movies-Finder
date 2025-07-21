@@ -24,6 +24,9 @@ async function pageDispaly() {
     const data = await url.json();
     const page = data.results;
 
+    console.log(page);
+    
+
     for (const card of page) {
       const {
         poster_path,
