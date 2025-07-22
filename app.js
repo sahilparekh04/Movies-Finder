@@ -1,11 +1,14 @@
-const cards = document.querySelector(".cards");
-let form = document.querySelector("#user-input");
-let search = document.querySelector("#search");
+const cardsContainer = document.querySelector(".cards-container");
+const form = document.querySelector("#user-input");
+const search = document.querySelector("#search");
+const imgPath = `https://image.tmdb.org/t/p/w500`;
+
+pageDisplay();
 
 window.addEventListener("load", () => {
   let load = document.querySelector(".load");
-  load.classList.remove("load");
-  load.classList.add('hide');
+  let data = document.querySelector(".data");
+  load.classList.toggle("hide");
 });
 
 form.addEventListener("submit", (e) => {
@@ -15,17 +18,13 @@ form.addEventListener("submit", (e) => {
 });
 
 // Page Load Data
-async function pageDispaly() {
+async function pageDisplay() {
   try {
-    const imgPath = `https://image.tmdb.org/t/p/w500`;
     const url = await fetch(
       `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1`
     );
     const data = await url.json();
     const page = data.results;
-
-    console.log(page);
-    
 
     for (const card of page) {
       const {
@@ -50,11 +49,23 @@ async function pageDispaly() {
       div.append(img);
       div.append(heading);
     }
+
+    // const cards = page.map((card) => {
+    //   const { poster_path, title } = card;
+    //   return `
+    //   <div class='card'>
+    //     <img scr='${imgPath}${poster_path}'/>
+    //     <h3 class='sm-title'>${title}</h3>
+    //   </div>`;
+    // });
+
+    // for (const card of cards) {
+    //   cardsContainer.append(card);
+    // }
   } catch (error) {
     console.log(error);
   }
 }
-pageDispaly();
 
 // Search data
 async function getData(value) {
@@ -72,11 +83,10 @@ async function getData(value) {
     console.log(error);
   }
 }
-// Display data in page
+// Display search data in page
 async function displayData(res) {
   console.log(res);
   const [data] = res.results;
-  const imgPath = `https://image.tmdb.org/t/p/w500`;
   const {
     poster_path,
     title,
@@ -85,7 +95,7 @@ async function displayData(res) {
     release_date: date,
   } = data;
 
-  cards.innerHTML = " ";
+  cardsContainer.innerHTML = " ";
   let div1 = document.createElement("div");
   let div = document.createElement("div");
   let div2 = document.createElement("div");
@@ -113,10 +123,10 @@ async function displayData(res) {
   div2.setAttribute("class", `box-2`);
 
   a.addEventListener("click", () => {
-    cards.innerHTML = "";
+    cardsContainer.innerHTML = "";
     pageDispaly();
   });
-  cards.append(div1);
+  cardsContainer.append(div1);
   div1.prepend(div3);
   div3.append(a);
   div1.append(div);
