@@ -4,8 +4,7 @@ let search = document.querySelector("#search");
 
 window.addEventListener("load", () => {
   let load = document.querySelector(".load");
-  load.classList.remove("load");
-  load.classList.add('hide');
+  load.classList.toggle('hide');
 });
 
 form.addEventListener("submit", (e) => {
