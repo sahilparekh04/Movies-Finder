@@ -2,11 +2,6 @@ const cards = document.querySelector(".cards");
 let form = document.querySelector("#user-input");
 let search = document.querySelector("#search");
 
-window.addEventListener("load", () => {
-  let load = document.querySelector(".load");
-  load.classList.toggle('hide');
-});
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   getData(search.value);
