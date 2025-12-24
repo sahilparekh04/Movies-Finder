@@ -32,7 +32,7 @@ async function moviesRequest(categoires, page, title) {
   try {
     const key = "78f34ce1";
     const res = await fetch(
-      `http://www.omdbapi.com/?i=tt3896198&apikey=${key}&t=${title}&s=${categoires}&page=${page}`
+      `https://www.omdbapi.com/?i=tt3896198&apikey=${key}&t=${title}&s=${categoires}&page=${page}`
     );
     const result = await res.json();
     return result.Search;
@@ -111,7 +111,7 @@ async function getData(searchValue) {
     const key = "78f34ce1";
     const search = searchValue;
     const res = await fetch(
-      `http://www.omdbapi.com/?i=tt3896198&apikey=${key}&t=${search}`
+      `https://www.omdbapi.com/?i=tt3896198&apikey=${key}&t=${search}`
     );
     const result = await res.json();
     displayData(result);
@@ -146,5 +146,4 @@ function displayData(value) {
           </div>`;
 }
 
-console.log("Hello World");
 
