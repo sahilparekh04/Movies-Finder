@@ -145,3 +145,6 @@ function displayData(value) {
           </div>
           </div>`;
 }
+
+console.log("Hello World");
+
