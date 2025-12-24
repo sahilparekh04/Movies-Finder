@@ -12,7 +12,8 @@ The app allows users to search for movies by title and view posters along with e
 ✅ Clean UI: Modern and minimal design using Tailwind CSS
 
 🖥️ Demo
-https://sahilparekh04.github.io/movie-finder-app/
+
+https://sahilparekh04.github.io/Movies-Finder/
 
 🛠️ Tech Stack
 
