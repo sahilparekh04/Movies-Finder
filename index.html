@@ -1,39 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movies Finder</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>CineFlow - Home</title>
+    <link rel="stylesheet" href="./src/css/output.css" />
   </head>
-  <body>
-    <header>
-      <div class="container">
-        <h2 class="logo">Movies Finder 🎬</h2>
+  <body
+    class="font-poppins dark:bg-zinc-900 dark:text-white bg-white text-black"
+  >
+    <!-- Navbar -->
+    <header
+      class="dark:bg-zinc-800 bg-blue-500 w-full flex justify-center left-0 top-0 sticky items-center p-2.5 z-50"
+    >
+      <div class="md:w-4/5 w-11/12 flex items-center relative">
+        <div class="logo p-1.5">
+          <h1
+            class="dark:text-blue-500 text-white text-xl md:text-3xl font-bold"
+          >
+            CineFlow
+          </h1>
+        </div>
+        <nav
+          class="hidden text-white md:flex md:items-center md:p-3.5 md:mx-3.5"
+        >
+          <a
+            class="mx-2.5 md:p-4 cursor-pointer dark:hover:text-white hover:bg-white hover:text-blue-500 dark:hover:bg-zinc-700 rounded-xl"
+            >Home</a
+          >
+          <a
+            class="mx-2.5 md:p-4 cursor-pointer dark:hover:text-white hover:bg-white hover:text-blue-500 dark:hover:bg-zinc-700 rounded-xl"
+            >Discover</a
+          >
+          <a
+            class="mx-2.5 md:p-4 cursor-pointer dark:hover:text-white hover:bg-white hover:text-blue-500 dark:hover:bg-zinc-700 rounded-xl"
+            >Library</a
+          >
+        </nav>
+        <div class="absolute right-0 cursor-pointer theme-btn">
+          <i
+            class="fa-regular md:p-4 text-white dark:text-amber-300 dark:hover:bg-zinc-700 dark:hover:text-white hover:bg-white hover:text-blue-500 rounded-full text-xl md:text-2xl"
+          ></i>
+        </div>
       </div>
     </header>
-    <main>
-      <section class="input-field">
-        <div class="container">
-          <form action="#" id="user-input">
+
+    <!-- Search Movies -->
+    <section class="w-full flex justify-center items-center my-2.5">
+      <!-- Movies Searches Container -->
+      <div class="md:w-4/5 w-11/12">
+        <div class="w-full p-2.5">
+          <form
+            action="#"
+            id="user-input"
+            class="border border-blue-500 text-blue-500 dark:text-white w-full md:rounded-2xl flex items-center justify-center rounded-xl p-1 md:p-1.5"
+          >
+            <i class="fa-solid fa-magnifying-glass text-xl md:text-2xl p-2"></i>
             <input
               type="text"
-              id="search"
-              class="search-inp"
-              placeholder="Search your favourite movies here...."
+              name="search-bar"
+              id="search-bar"
+              class="text-gray-500 dark:text-white w-[95%] outline-0 p-2"
+              placeholder="Search for movies..."
             />
           </form>
         </div>
-      </section>
-      <section class="card-container">
-        <div class="container">
-          <div class="title">
-            <h3>Popular Movies</h3>
+        <div
+          class="w-full h-28 md:h-auto flex items-center justify-between flex-wrap p-2.5"
+        >
+          <div
+            class="hover:border-blue-500 grow-2 hover:border hover:text-blue-500 hover:bg-white dark:border dark:hover:bg-blue-500 dark:hover:text-white dark:border-blue-500 dark:bg-zinc-900 text-white bg-blue-500 p-1 md:p-1.5 md:w-24 h-8 w-16 rounded-xl md:rounded-2xl flex items-center justify-center m-1.5 cursor-pointer"
+          >
+            <h1 class="text-sm md:text-lg">Action</h1>
           </div>
-          <div class="cards"></div>
+          <div
+            class="hover:border-blue-500 grow-2 hover:border hover:text-blue-500 hover:bg-white dark:border dark:hover:bg-blue-500 dark:hover:text-white dark:border-blue-500 dark:bg-zinc-900 text-white bg-blue-500 p-1 md:p-1.5 md:w-24 h-8 w-16 rounded-xl md:rounded-2xl flex items-center justify-center m-1.5 cursor-pointer"
+          >
+            <h1 class="text-sm md:text-lg">Romantic</h1>
+          </div>
+          <div
+            class="hover:border-blue-500 grow-2 hover:border hover:text-blue-500 hover:bg-white dark:border dark:hover:bg-blue-500 dark:hover:text-white dark:border-blue-500 dark:bg-zinc-900 text-white bg-blue-500 p-1 md:p-1.5 md:w-24 h-8 w-16 rounded-xl md:rounded-2xl flex items-center justify-center m-1.5 cursor-pointer"
+          >
+            <h1 class="text-sm md:text-lg">Comedy</h1>
+          </div>
+          <div
+            class="hover:border-blue-500 grow-2 hover:border hover:text-blue-500 hover:bg-white dark:border dark:hover:bg-blue-500 dark:hover:text-white dark:border-blue-500 dark:bg-zinc-900 text-white bg-blue-500 p-1 md:p-1.5 md:w-24 h-8 w-16 rounded-xl md:rounded-2xl flex items-center justify-center m-1.5 cursor-pointer"
+          >
+            <h1 class="text-sm md:text-lg">Sci-Fi</h1>
+          </div>
+          <div
+            class="hover:border-blue-500 grow-2 hover:border hover:text-blue-500 hover:bg-white dark:border dark:hover:bg-blue-500 dark:hover:text-white dark:border-blue-500 dark:bg-zinc-900 text-white bg-blue-500 p-1 md:p-1.5 md:w-24 h-8 w-16 rounded-xl md:rounded-2xl flex items-center justify-center m-1.5 cursor-pointer"
+          >
+            <h1 class="text-sm md:text-lg">Drama</h1>
+          </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+
+    <section
+      id="search-box"
+      class="w-full flex justify-center items-center my-2.5"
+    >
+      <div class="md:w-4/5 w-11/12">
+        <div class="w-full p-2.5" id="search-box-input"></div>
+      </div>
+    </section>
+
+    <!-- Trending Now Section -->
+    <section
+      id="trending"
+      class="w-full flex justify-center items-center my-2.5"
+    >
+      <!-- Trending Now Container -->
+      <div class="md:w-4/5 w-11/12">
+        <div class="w-full">
+          <h1
+            class="text-neutral-800 dark:text-white md:text-2xl text-xl font-semibold md:font-bold p-2.5"
+          >
+            Trending Now
+          </h1>
+        </div>
+        <div
+          class="w-full trending-card-container flex justify-center items-center md:justify-start flex-wrap"
+        >
+          <!-- Cards -->
+        </div>
+      </div>
+    </section>
+
+    <!--Popular Searches Section-->
+    <section
+      id="popular"
+      class="w-full flex justify-center items-center my-2.5"
+    >
+      <!-- Popular Searches Container -->
+      <div class="md:w-4/5 w-11/12">
+        <div class="w-full">
+          <h1
+            class="text-neutral-800 dark:text-white md:text-2xl md:font-bold p-2.5 text-xl font-semibold"
+          >
+            Popular Searches
+          </h1>
+        </div>
+        <div
+          class="w-full popular-searches flex justify-center md:justify-start items-center flex-wrap"
+        >
+          <!-- Cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Script File -->
     <script src="app.js"></script>
+
+    <!-- Fontawesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/351ed989bc.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
