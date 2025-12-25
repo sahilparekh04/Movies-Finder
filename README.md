@@ -1,11 +1,11 @@
-🎬 Responsive Movie Finder App
+# 🎬 Responsive Movie Finder App
 
 A responsive movie search web application built using HTML, Tailwind CSS, and vanilla JavaScript, powered by the OMDb API.
 The app allows users to search for movies by title and view posters along with essential movie details in a clean, mobile-friendly interface.
 
 ---
 
-🚀 Features
+# 🚀 Features
 
 ✅ Search Movies: Search movies by title using the OMDb API
 ✅ Movie Posters: Display movie posters for visual browsing
@@ -16,13 +16,13 @@ The app allows users to search for movies by title and view posters along with e
 
 ---
 
-🖥️ Demo
+# 🖥️ Demo
 
 https://sahilparekh04.github.io/Movies-Finder/
 
 ---
 
-🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 HTML
 
@@ -34,7 +34,7 @@ OMDb API
 
 ---
 
-📌 Project Highlights
+# 📌 Project Highlights
 
 API integration using fetch()
 
