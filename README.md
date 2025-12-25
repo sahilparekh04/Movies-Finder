@@ -8,10 +8,15 @@ The app allows users to search for movies by title and view posters along with e
 # 🚀 Features
 
 ✅ Search Movies: Search movies by title using the OMDb API
+
 ✅ Movie Posters: Display movie posters for visual browsing
+
 ✅ Movie Details: View basic information like title, year, and type
+
 ✅ Dynamic Results: Fetch and render multiple movie results dynamically
+
 ✅ Responsive Design: Optimized for mobile, tablet, and desktop screens
+
 ✅ Clean UI: Modern and minimal design using Tailwind CSS
 
 ---
